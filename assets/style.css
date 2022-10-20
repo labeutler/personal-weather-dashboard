@@ -8,7 +8,7 @@ h1 {
   
   /* api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid={API key} */
   
-    {
+    /* {
     "cod": "200",
     "message": 0,
     "cnt": 40,
@@ -181,4 +181,4 @@ h1 {
       "sunrise": 1661834187,
       "sunset": 1661882248
     }
-  }
+  } */
