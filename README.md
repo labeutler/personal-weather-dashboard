@@ -1,4 +1,4 @@
-# weather-dashboard-challenge-6
+# personal-weather-dashboard
 An up to date 5 day weather outlook for multiple cities.
 
 ## Description
