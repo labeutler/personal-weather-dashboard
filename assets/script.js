@@ -27,7 +27,7 @@ var formSumbitHandler = function (event) {
 var saveSearch = function () {
     localStorage.setItem("cities", JSON.stringify(cities));
 };
-//Added event listeners
+//Added event listener
 formEl.addEventListener("submit", formSumbitHandler);
 
 //Get weather function
@@ -144,7 +144,7 @@ var display5Day = function (weather) {
         forecastContainerEl.appendChild(forecastEl);
     }
 }
-
+//Past search result container
 var pastSearch = function (pastSearch) {
     pastSearchEl = document.createElement("button");
     pastSearchEl.textContent = pastSearch;

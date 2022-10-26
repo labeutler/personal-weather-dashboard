@@ -3,10 +3,12 @@
   color: aliceblue;
 }
 
+/* added for color on the main sign */
 .horizontal-gradient {
   background: linear-gradient(to right, blue, darkblue);
 }
 
+/* added to wrap 5 day forecast when screen is being responsive */
 #fivedayContainer {
   flex-wrap: wrap;
 }
