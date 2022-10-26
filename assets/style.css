@@ -6,3 +6,7 @@
 .horizontal-gradient {
   background: linear-gradient(to right, blue, darkblue);
 }
+
+#fivedayContainer {
+  flex-wrap: wrap;
+}

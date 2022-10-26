@@ -29,7 +29,6 @@ var saveSearch = function () {
 };
 //Added event listeners
 formEl.addEventListener("submit", formSumbitHandler);
-pastSearchBtnEl.addEventListener("click", pastSearchHandler);
 
 //Get weather function
 var getCityWeather = function (city) {
@@ -162,3 +161,6 @@ var pastSearchHandler = function (event) {
         get5Day(city);
     }
 }
+
+//Add event listener to recall previous searches.
+pastSearchBtnEl.addEventListener("click", pastSearchHandler);
