@@ -92,6 +92,7 @@ var get5Day = function (city) {
         .then(function (response) {
             response.json().then(function (data) {
                 display5Day(data);
+                console.log(data)
             });
         });
 };
@@ -130,8 +131,16 @@ var display5Day = function (weather) {
         forecastTempEl.classList = "card-body text-center";
         forecastTempEl.textContent = dailyForecast.main.temp + " °F";
 
-        //append to forecast card
-        forecastEl.appendChild(forecastTempEl);
+       //append to forecast card for temp
+       forecastEl.appendChild(forecastTempEl);
+
+        //create wind speed span
+        var forecastSpeedEl = document.createElement("span");
+        forecastSpeedEl.classList = "card-body text-center";
+        forecastSpeedEl.textContent = dailyForecast.wind.speed + " MPH";
+     
+        //append to forcast card for wind speed 
+        forecastEl.appendChild(forecastSpeedEl);
 
         var forecastHumEl = document.createElement("span");
         forecastHumEl.classList = "card-body text-center";
