@@ -27,22 +27,24 @@ THEN I am again presented with current and future conditions for that city<br>
 
 N/A
 
-## Usage (UPDATE)
+## Usage 
 
-<!-- WHEN I search for a city<br>
-THEN I am presented with current and future conditions for that city and that city is added to the search history<br> -->
-<!-- WHEN I view current weather conditions for that city<br>
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed<br> -->
-WHEN I view future weather conditions for that city<br>
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity<br>
-<!-- WHEN I click on a city in the search history<br>
-THEN I am again presented with current and future conditions for that city<br> -->
+Link https://labeutler.github.io/personal-weather-dashboard/
 
-Provide instructions and examples for use. Include screenshots as needed.
+I am presented with current and future conditions for that city and that city is added to the search history<br>
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+![alt text](./assets/images/history.png)
 
-![alt text](assets/images/screenshot.png)
+I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the wind speed<br> 
+
+![alt text](./assets/images/Current.png)
+
+I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity<br>
+
+![alt text](./assets/images/5day.png)
+
+I am again presented with current and future conditions for that city<br> 
+![alt text](./assets/images/current%26future.png)
 
 ## Credits
 
