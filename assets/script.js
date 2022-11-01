@@ -9,11 +9,11 @@ var forecastContainerEl = document.querySelector("#fivedayContainer");
 var pastSearchBtnEl = document.querySelector("#pastSearchBtns");
 
 //Form Handler to search for city
-var formSumbitHandler = function (event) {
+var formHandler = function (event) {
     event.preventDefault();
     var city = inputEl.value.trim();
     if (city) {
-        getCityWeather(city);
+        getWeather(city);
         get5Day(city);
         cities.unshift({ city });
         inputEl.value = "";
@@ -28,10 +28,10 @@ var saveSearch = function () {
     localStorage.setItem("cities", JSON.stringify(cities));
 };
 //Added event listener
-formEl.addEventListener("submit", formSumbitHandler);
+formEl.addEventListener("submit", formHandler);
 
 //Get weather function
-var getCityWeather = function (city) {
+var getWeather = function (city) {
     //Fetch api to get lat/lon
     var apiKey = 'd2692fd833256c6caad1fc0c4c32881a';
     var apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`
@@ -166,7 +166,7 @@ var pastSearch = function (pastSearch) {
 var pastSearchHandler = function (event) {
     var city = event.target.getAttribute("data-city")
     if (city) {
-        getCityWeather(city);
+        getWeather(city);
         get5Day(city);
     }
 }
