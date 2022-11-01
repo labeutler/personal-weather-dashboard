@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Link stylesheets  -->
+    <!-- Link stylesheets  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/style.css">
     <title>5-Day Weather Forcast</title>
@@ -19,35 +19,34 @@
         </div>
     </header>
     <main class="container-fluid">
-    <div class = "row">
-        <div class="col-12 col-md-4 p-2 search-column">
-            <form class="border p-2" id = "cityForm">
-                <h5>Search for a City:</h5>
-                <input id="city" type = "text" autofocus = "true" class = "form-input"/>
-                <button class = "btn btn-primary" type = "submit">Search</button>
-            </form>
-            <div class = "past-search border" id = "pastSearchBtns"></div>
-        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 p-2 search-column">
+                <form class="border p-2" id="cityForm">
+                    <h5>Search for a City:</h5>
+                    <input id="city" type="text" autofocus="true" class="form-input" />
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+                <div class="past-search border" id="pastSearchBtns"></div>
+            </div>
 
-        <div class="col-12 col-md-8">
-            <div class="row border selected-city" id="current-forecast">
-                <div class="col-12">
-                    <h2 id="searched-city"></h2>
-                    <div id = "currentWeatherContainer" class = "list-group"></div>
+            <div class="col-12 col-md-8">
+                <div class="row border selected-city" id="current-forecast">
+                    <div class="col-12">
+                        <h2 id="searched-city"></h2>
+                        <div id="currentWeatherContainer" class="list-group"></div>
+                    </div>
+                </div>
+                <!-- Show current and 5 day forcast -->
+                <div class="row border" id="five-day-forecast">
+                    <h2 class="col-8" id="forecast"></h2>
+                    <div class="d-flex" id="fivedayContainer"></div>
                 </div>
             </div>
-<!-- Show current and 5 day forcast -->
-            <div class = "row border" id = "five-day-forecast">
-                <h2 class= "col-8" id = "forecast"></h2>
-                <div class = "d-flex" id = "fivedayContainer"></div>
-            </div>
         </div>
-    </div>    
-</main>
+    </main>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
-        <script src="./assets/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
 </body>
+
 </html>
