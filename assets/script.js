@@ -5,7 +5,7 @@ var inputEl = document.querySelector("#city");
 var weatherEl = document.querySelector("#currentWeatherContainer");
 var citySearchEl = document.querySelector("#searched-city");
 var forecastTitle = document.querySelector("#forecast");
-var forecastContainerEl = document.querySelector("#fivedayContainer");
+var fiveDayContainerEl = document.querySelector("#fivedayContainer");
 var pastSearchBtnEl = document.querySelector("#pastSearchBtns");
 
 //Form Handler to search for city
@@ -44,7 +44,7 @@ var displayWeather = function (weather, searchCity) {
 
     //Pull date to display for city
     var currentDate = document.createElement("span")
-    currentDate.textContent = " (" + moment(weather.dt.value).format("MMM D, YYYY") + ") ";
+    currentDate.textContent = " (" + moment(weather.dt.value).format("MMMM D, YYYY") + ") ";
     citySearchEl.appendChild(currentDate);
 
     //Pull weather icon details
@@ -91,7 +91,7 @@ var get5Day = function (city) {
     fetch(apiURL)
         .then(function (response) {
             response.json().then(function (data) {
-                display5Day(data);
+                displayFiveDay(data);
                 console.log(data)
             });
         });
@@ -99,20 +99,21 @@ var get5Day = function (city) {
 
 
 //Display Five Day Forcast
-var display5Day = function (weather) {
-    forecastContainerEl.textContent = ""
-    forecastTitle.textContent = "5-Day Forecast:";
+var displayFiveDay = function (weather) {
+    fiveDayContainerEl.textContent = ""
+    forecastTitle.textContent = "Five-Day Forecast:";
 
     var forecast = weather.list;
     for (var i = 5; i < forecast.length; i = i + 8) {
         var dailyForecast = forecast[i];
-
         var forecastEl = document.createElement("div");
+
+        //creates a vertical display of forecasted days
         forecastEl.classList = "card bg-primary text-light m-2";
 
         //create date element
         var forecastDate = document.createElement("h5")
-        forecastDate.textContent = moment.unix(dailyForecast.dt).format("MMM D, YYYY");
+        forecastDate.textContent = moment.unix(dailyForecast.dt).format("MMMM D, YYYY");
         forecastDate.classList = "card-header text-center"
         forecastEl.appendChild(forecastDate);
 
@@ -149,7 +150,7 @@ var display5Day = function (weather) {
         forecastEl.appendChild(forecastHumEl);
 
         //append to five day container
-        forecastContainerEl.appendChild(forecastEl);
+        fiveDayContainerEl.appendChild(forecastEl);
     }
 }
 //Past search result container
